@@ -10,7 +10,7 @@ schedule_length = int(sys.argv[2])
 
 teams_dataframe = pd.read_csv(file)
 
-schedule = create_schedule(teams_dataframe["team_name"].tolist(), schedule_length)
+schedule = create_schedule(teams_dataframe['team_name'].tolist(), schedule_length)
 
 final_schedule = teams_dataframe.merge(schedule, how='inner', on='team_name')
 
