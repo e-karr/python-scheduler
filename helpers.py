@@ -13,7 +13,7 @@ def validate_arguments(args):
     if not args[2].isdigit() or int(args[2]) <= 0:
         raise ValueError('Final argument must be an integer greater than 0')
     
-    if is_csv_file(args[1]) == False:
+    if not is_csv_file(args[1]):
         raise ValueError('Must submit csv file')
     
     df = pd.read_csv(args[1])
