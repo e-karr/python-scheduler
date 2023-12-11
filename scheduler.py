@@ -1,6 +1,7 @@
 import pandas as pd
 import sys
 import random
+from pathlib import Path
 
 # TODO validate length of command line arguments
 # TODO validate first argument is csv file
@@ -29,6 +30,11 @@ def create_schedule(teams, weeks):
 schedule = create_schedule(teams_dataframe["team_name"].tolist(), schedule_length)
 
 final_schedule = teams_dataframe.merge(schedule, how='inner', on='team_name')
+
+filepath = Path('./output/schedule.csv')
+filepath.parent.mkdir(parents=True, exist_ok=True)
+
+final_schedule.to_csv(filepath)
 
 print(final_schedule)
 

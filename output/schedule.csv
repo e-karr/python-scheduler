@@ -1,0 +1,11 @@
+,rank,team_name,1,2,3,4
+0,1,Hammond's Heroes,Jaguars,Rainbow Leopards,Lions,Unicorns
+1,2,Wildcats,Hammond's Heroes,Jaguars,Rainbow Leopards,Lions
+2,3,Jayhawks,Stallions,Tigers,Wildcats,Hammond's Heroes
+3,4,Unicorns,Bears,Jayhawks,Stallions,Tigers
+4,5,Rainbow Leopards,Lions,Unicorns,Bears,Jayhawks
+5,6,Lions,Unicorns,Bears,Jayhawks,Stallions
+6,7,Tigers,Wildcats,Hammond's Heroes,Jaguars,Rainbow Leopards
+7,8,Bears,Jayhawks,Stallions,Tigers,Wildcats
+8,9,Jaguars,Rainbow Leopards,Lions,Unicorns,Bears
+9,10,Stallions,Tigers,Wildcats,Hammond's Heroes,Jaguars
