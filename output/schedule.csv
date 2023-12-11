@@ -1,12 +1,12 @@
-,rank,team_name,1,2,3,4,5
-0,1,Hammond's Heroes,Bears,Lions,Unicorns,Jayhawks,bye
-1,2,Wildcats,Hammond's Heroes,Bears,Lions,Unicorns,Jayhawks
-2,3,Jayhawks,bye,Jaguars,Stallions,Rainbow Leopards,Dragons
-3,4,Unicorns,Jayhawks,bye,Jaguars,Stallions,Rainbow Leopards
-4,5,Rainbow Leopards,Dragons,Tigers,Wildcats,Hammond's Heroes,Bears
-5,6,Lions,Unicorns,Jayhawks,bye,Jaguars,Stallions
-6,7,Tigers,Wildcats,Hammond's Heroes,Bears,Lions,Unicorns
-7,8,Bears,Lions,Unicorns,Jayhawks,bye,Jaguars
-8,9,Jaguars,Stallions,Rainbow Leopards,Dragons,Tigers,Wildcats
-9,10,Stallions,Rainbow Leopards,Dragons,Tigers,Wildcats,Hammond's Heroes
-10,11,Dragons,Tigers,Wildcats,Hammond's Heroes,Bears,Lions
+,rank,team_name,1,2,3,4,5,6,7,8,9,10
+0,1,Hammond's Heroes,Tigers,bye,Stallions,Bears,Lions,Unicorns,Jayhawks,Rainbow Leopards,Dragons,Jaguars
+1,2,Wildcats,Hammond's Heroes,Tigers,bye,Stallions,Bears,Lions,Unicorns,Jayhawks,Rainbow Leopards,Dragons
+2,3,Jayhawks,Rainbow Leopards,Dragons,Jaguars,Wildcats,Hammond's Heroes,Tigers,bye,Stallions,Bears,Lions
+3,4,Unicorns,Jayhawks,Rainbow Leopards,Dragons,Jaguars,Wildcats,Hammond's Heroes,Tigers,bye,Stallions,Bears
+4,5,Rainbow Leopards,Dragons,Jaguars,Wildcats,Hammond's Heroes,Tigers,bye,Stallions,Bears,Lions,Unicorns
+5,6,Lions,Unicorns,Jayhawks,Rainbow Leopards,Dragons,Jaguars,Wildcats,Hammond's Heroes,Tigers,bye,Stallions
+6,7,Tigers,bye,Stallions,Bears,Lions,Unicorns,Jayhawks,Rainbow Leopards,Dragons,Jaguars,Wildcats
+7,8,Bears,Lions,Unicorns,Jayhawks,Rainbow Leopards,Dragons,Jaguars,Wildcats,Hammond's Heroes,Tigers,bye
+8,9,Jaguars,Wildcats,Hammond's Heroes,Tigers,bye,Stallions,Bears,Lions,Unicorns,Jayhawks,Rainbow Leopards
+9,10,Stallions,Bears,Lions,Unicorns,Jayhawks,Rainbow Leopards,Dragons,Jaguars,Wildcats,Hammond's Heroes,Tigers
+10,11,Dragons,Jaguars,Wildcats,Hammond's Heroes,Tigers,bye,Stallions,Bears,Lions,Unicorns,Jayhawks

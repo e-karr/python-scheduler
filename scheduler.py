@@ -1,11 +1,11 @@
 import pandas as pd
+import os
 import sys
 import random
 from pathlib import Path
+from helpers import validate_arguments
 
-# TODO validate length of command line arguments
-# TODO validate first argument is csv file
-# TODO allow user to have second argument of number of weeks, validate argument is number, validate that number isn't larger than number of rows in csv - 1
+validate_arguments(sys.argv)
 
 file = sys.argv[1]
 schedule_length = int(sys.argv[2])
@@ -41,5 +41,4 @@ final_schedule.to_csv(filepath)
 
 print(final_schedule)
 
-# TODO output to csv and/or excel
 # TODO user interface
