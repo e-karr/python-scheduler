@@ -13,9 +13,12 @@ schedule_length = int(sys.argv[2])
 teams_dataframe = pd.read_csv(file)
 
 # create round robin schedule, keep number of weeks requested, and return dataframe
-# TODO figure out how to do this without having to create a round robin schedule first
-# TODO if uneven number of teams, give one team a bye each week
+# TODO figure out how to do this without having to create a round robin schedule first (tried in another branch and got infinite loops and recursion errors)
 def create_schedule(teams, weeks):
+
+    if len(teams) % 2 != 0:
+        teams.append('bye')
+
     first_row = random.sample(teams, len(teams))
     permutes = random.sample(range(len(teams)), len(teams))
     
