@@ -2,6 +2,8 @@ import pandas as pd
 import os
 import random
 
+# turn into class object with methods, CSV class, Excel class
+
 def is_csv_file(file_path):
     _, file_extension = os.path.splitext(file_path)
     return file_extension.lower() == '.csv'
