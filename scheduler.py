@@ -1,28 +1,42 @@
-import pandas as pd
 import sys
 from pathlib import Path
-from helpers import validate_arguments, create_schedule
+from helpers import create_schedule, validate_schedule_length
+from file_handler import Csv, Excel
 
-# ensure command line arguments are valid
-validate_arguments(sys.argv)
+def main(args):
 
-file = sys.argv[1]
-schedule_length = int(sys.argv[2])
+    # validate args length
+    if len(args) < 3:
+        raise ValueError('Command-line aruguments must include a file and desired length of schedule')
 
-# read csv into dataframe
-teams_dataframe = pd.read_csv(file)
+    file = args[1]
 
-# create schedule, returns dataframe
-schedule = create_schedule(teams_dataframe['team_name'].tolist(), schedule_length)
+    # validate file type
+    if Csv.validate(file):
+        file = Csv(file)
+    elif Excel.validate(file):
+        file = Excel(file)
+    else:
+        raise ValueError('Must submit CSV or Excel file type')
 
-# merge schedule dataframe into teams dataframe
-final_schedule = teams_dataframe.merge(schedule, how='inner', on='team_name')
+    # read into dataframe
+    teams_dataframe = file.read_file()
 
-# save schedule to csv
-filepath = Path('./output/schedule.csv')
-filepath.parent.mkdir(parents=True, exist_ok=True)
-final_schedule.to_csv(filepath)
+    # validate schedule length
+    schedule_length = validate_schedule_length(args[2], teams_dataframe)
 
-print(final_schedule)
+    # create schedule, returns dataframe
+    schedule = create_schedule(teams_dataframe['team_name'].tolist(), schedule_length)
 
-# TODO user interface
+    # merge schedule dataframe into teams dataframe
+    final_schedule = teams_dataframe.merge(schedule, how='inner', on='team_name')
+
+    # save schedule to csv
+    filepath = Path('./output/schedule.csv')
+    filepath.parent.mkdir(parents=True, exist_ok=True)
+    final_schedule.to_csv(filepath)
+
+    print(final_schedule)
+
+if __name__ == '__main__':
+    main(sys.argv)
