@@ -1,5 +1,6 @@
-import pandas as pd
 import random
+
+import pandas as pd
 
 def validate_schedule_length(length, df_file):
     if not length.isdigit() or int(length) <= 0:

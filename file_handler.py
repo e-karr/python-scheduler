@@ -1,4 +1,5 @@
 import os
+
 import pandas as pd
 
 class FileHandler:
@@ -11,7 +12,8 @@ class FileHandler:
     def read_file(self):
         raise NotImplementedError("Subclasses must implement the 'read_file' method")
     
-    def check_columns(self, df):
+    @staticmethod
+    def check_columns(df):
         if 'team_name' not in df.columns:
             raise ValueError("File must include 'team_name' column")
     
